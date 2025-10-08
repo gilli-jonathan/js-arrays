@@ -41,9 +41,37 @@ console.log(teachers);
 
 // 4. Verifica se 'Fabio' è presente nell'array teachers
 // e salva il risultato nella variabile isFabioPresent
+
+/* SOLUZIONE CON INCLUDES
 const isFabioPresent = teachers.includes("Fabio");
+console.log(isFabioPresent);
+*/
+let isFabioPresent = false;
+
+for (let i = 0; i < teachers.length; i++) {
+  const teacher = teachers[i];
+
+  if (teacher === "Fabio") {
+    isFabioPresent = true;
+  }
+}
+
 console.log(isFabioPresent);
 
 // 5. Unisci tutti gli insegnanti nell'array teachers in una stringa separata da virgole e salvala nella variabile teachersString
-const teachersString = teachers.join(",");
+
+/*const teachersString = teachers.join(",");
+console.log(teachersString);*/
+
+let teachersString = "";
+
+for (let i = 0; i < teachers.length; i++) {
+  const teacher = teachers[i];
+  teachersString = teachersString + teacher;
+
+  if (i < teachers.length - 1) {
+    teachersString = teachersString + ", ";
+  }
+}
+
 console.log(teachersString);
