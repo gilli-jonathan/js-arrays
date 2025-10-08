@@ -32,5 +32,6 @@ console.log(teachers);
 const isFabioPresent = teachers.includes("Fabio");
 console.log(isFabioPresent);
 
-// 5. Unisci tutti gli insegnanti nell'array teachers in una stringa  separata da virgole e salvala nella variabile teachersString
-const teachersString = null;
+// 5. Unisci tutti gli insegnanti nell'array teachers in una stringa separata da virgole e salvala nella variabile teachersString
+const teachersString = teachers.join(",");
+console.log(teachersString);
